@@ -396,6 +396,6 @@ void app_main(void)
 
 //    xTaskCreate(&hid_demo_task, "hid_task", 2048, NULL, 5, NULL);
     xTaskCreatePinnedToCore(&hid_demo_task, "hid_task", 2048, NULL, 4, NULL, 0);
-    xTaskCreatePinnedToCore(&adc_val_task, "rout_task", 2048, NULL, 5, NULL, 1);
+    xTaskCreatePinnedToCore(&adc_val_task, "adc_task", 2048, NULL, 5, NULL, 1);
 }
 
